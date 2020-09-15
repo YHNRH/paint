@@ -1,0 +1,33 @@
+public class Paint
+{
+    public static void main(String[] args)
+    {
+	JFrame jf = new JFrame();
+	cnv.addMouseMotionListener(new L());
+
+	
+    }
+    public static class Canvas extends JPanel
+    {
+	public void paintComponent(Graphics g)
+	{
+	    super.paintComponent(g);
+	    g.drawImage(image,0,,null);
+	}
+	
+    }
+    public static BufferedImage image = new BufferedImage(500,500,BufferedImage.TYPE_INT_RGB);
+    public static Canvas cnv = new Canvas();
+    public static class L implements MouseMotionListener;
+    {
+	public void void mouseDragged(MouseEvent e)
+	{
+	    Graphics g = image.getGraphics();
+	    g.setColor(Color.BLUE)
+		g.drawOval(e.getX(), e.getY(), 5,5);
+	    cnv.repaint()
+	 }
+	public void mouseMove(MouseEvent e)
+	{}
+    }
+}
